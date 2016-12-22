@@ -1,0 +1,1820 @@
+/*
+Theme Name: jimmyNames
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jimmynames
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+jimmyNames is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* JIMMY NAMES CSS */
+
+
+/* Fixes to Normalisation */
+
+## Links
+--------------------------------------------------------------
+
+a {
+	color: gold ;
+}
+
+a:visited {
+	color: black ;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: gold;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/* Nav Links Behaviour */
+
+.hero .heroContainer nav ul li a:visited,
+.hero .heroContainer nav ul li a:active,
+.hero .heroContainer nav ul li a:focus {
+	color: black;
+}
+
+
+
+
+/* Fixes to template */
+
+.site-header {
+	display: none !important;
+}
+#masthead {
+	display: none !important;
+}
+
+.main-navigation {
+	display: none;
+}
+
+.page-content, .entry-content, .entry-summary {
+margin: 0;
+}
+
+h5 {
+	margin: 0;
+}
+
+/* Pre Loader */
+
+/* Questions
+- Get Lawrence to resize to  128x128
+*/
+
+#wptime-plugin-preloader {
+	display: none;
+}
+
+#wptime-plugin-preloader .preLoaderWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: nowrap;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+	z-index: 89;
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+#wptime-plugin-preloader .preLoaderIcon {
+	z-index: 90;
+}
+
+
+/*.entry-content p:first-child {
+	display: none;
+}*/
+
+/* Global */
+
+body {
+	background-color: #151515;
+}
+
+@font-face {
+	font-family: archerLight;
+	src: url(http://www.merkabacommunity.com/wp-content/themes/jimmynames/fonts/Archer/Archer-Light.otf);
+}
+
+@font-face {
+	font-family: archer;
+	src: url(http://www.merkabacommunity.com/wp-content/themes/jimmynames/fonts/Archer/Archer-Book.otf);
+}
+
+@font-face {
+	font-family: archerSemibold;
+	src: url(http://www.merkabacommunity.com/wp-content/themes/jimmynames/fonts/Archer/Archer-Semibold.otf);
+}
+
+* {
+	text-align: center;
+	font-family: archer, sans-serif !important;
+}
+
+p {
+	font-weight: 100;
+}
+
+.site {
+	z-index: 99;
+	font-family: archer !important;
+	background: #ECE9E6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #ECE9E6 , #FFFFFF); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #ECE9E6 , #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section {
+	padding: 1.333em 0;
+	min-height: 100vh;
+	display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+	flex-wrap: nowrap;
+}
+
+.container {
+	width: 75%;
+	margin: 0 auto;
+	padding: 0.5em 0;
+}
+
+.hero,
+#about,
+#retreats,
+#gallery,
+#faq,
+#contact {
+	/*border-bottom: 1px solid #515151;*/
+}
+
+.entry-footer {
+	display: none !important;
+}
+
+.wrap {
+	margin: 0 auto;
+	/*GET GENSIS WRAP CLASS AND ADD */
+}
+
+
+/* Buttons */
+
+button {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid white !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: white !important;
+		transition: all 1s ease;
+}
+
+button:hover {
+	box-shadow: none !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid black !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: black !important;
+	transition: all 1s ease;
+	text-shadow: none !important;
+}
+
+/* Colors */
+
+/* black = #303030 */
+/* White = # */
+
+/* Nav */
+
+ nav ul {
+	list-style: none;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 50%;
+	margin: 0 auto;
+	font-size: 0.75em;
+	padding: 0;
+}
+
+ nav ul li {
+	padding: 0 1em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+nav ul li a:visited,
+nav ul li a:active,
+nav ul li a:hover {
+	color: white;
+	text-decoration: none;
+	outline: none;
+}
+
+/* Landing Page */
+
+.home #secondary {
+	display: none !important;
+}
+
+/* Header */
+
+.headerH h3 {
+	font-size: 1.333em;
+	text-transform: uppercase;
+	font-weight: lighter;
+	margin: 0;
+	padding: 1em 0;
+	font-weight: 400;
+}
+
+.detail {
+	font-size: 0.9em;
+}
+
+.headerIcon {
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.header h5 {
+	font-weight: 100;
+	letter-spacing: 0.5px;
+	font-size: 0.85em;
+	text-transform: uppercase;
+}
+
+
+/* Hero */
+
+.hero {
+	background-image: url(http://merkabacommunity.com/wp-content/uploads/2016/12/Merkaba-Header-Image.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	min-height: 100vh;
+}
+
+.heroContainer {
+	padding: 0;
+}
+
+
+.heroContainer header {
+	padding: 1em 0;
+}
+
+.title {
+	line-height: 1;
+}
+
+.b {
+	font-weight: bold;
+	padding: 0 0.3em;
+}
+
+.heroLogo {
+	margin-top: 1em;
+	height: 250px;
+	width: 250px;
+}
+
+.hero h1 {
+	font-size: 6em;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.hero h3 {
+	font-size: 1.666em;
+	text-transform: uppercase;
+	font-weight: lighter;
+	margin: 0;
+}
+
+
+
+.hero .heroInfoP {
+	width: 55%;
+	margin: 0 auto;
+}
+
+
+
+/* About Us */
+
+.about {
+	background-color: #f7f7f7;
+}
+.aboutMiniG {
+	margin-bottom: 1.5em;
+}
+
+#about .fluid-width-video-wrapper {
+	border: 15px solid #D0BD8A !important;
+}
+
+/* Retreats */
+
+.retreats {
+	background-color: #DDB68F;
+}
+
+#retreats button {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid black !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: black !important;
+	transition: all 1s ease;
+text-shadow: none !important;
+}
+
+#retreats button:hover {
+	box-shadow: none !important;
+	background:  #151515 !important;
+	box-shadow: none !important;
+	border: 2px solid #D0BD8A !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: #D0BD8A !important;
+		text-shadow: none !important;
+	transition: all 0.666s ease-out;
+	text-shadow: none !important;
+}
+
+#retreats button:focus {
+	outline: none !important;
+}
+
+
+
+/* Book */
+
+#book {
+display: none;
+}
+
+/* Gallery */
+
+#gallery {
+ background-color: #E4EFF1 ;
+	padding-bottom: 0;
+	color: black;
+	display: block !important;
+}
+/* 2ndry Gold #D0BC89 */
+
+#gallery #GalleryIcon .st0 {
+	stroke: black !important;
+}
+#gallery #GalleryIcon .st1 {
+	fill: black !important;
+}
+
+.envira-gallery-wrap {
+	margin: 0 auto !important;
+}
+
+#fancybox-wrap #fancybox-outer > #fancybox-content {
+	border: 0 solid black;
+}
+
+#fancybox-close{
+	display: none !important;
+}
+
+
+
+
+.envira-gallery-wrap,
+.envira-gallery-wrap .envira-gallery-public {
+}
+
+.fancybox-title-over {
+	display: none !important;
+}
+
+
+/* FAQs */
+
+/* Questions:
+ - can i only load one/3 of these on one page like calling an array
+ or do they all load at once?
+ - if not then ill jhave to consider ACF :(
+
+ */
+
+#faq {
+	background-color: #A2D5F5;
+}
+
+#faq .header {
+	color: black !important;
+}
+
+#faq #FAQIcon .st0 {
+	stroke: black !important;
+}
+
+#faq #FAQIcon .st1 {
+	fill: black !important;
+}
+
+.faq-accordion .faq-main {
+	color: white;
+	background-color: transparent !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	text-decoration: none !important;
+	font-size: 1em !important;
+	font-weight: normal !important;
+	letter-spacing: -.025em !important;
+	line-height: 1.1 !important;
+	border: none !important;
+	border-bottom: none !important;
+	margin-bottom: 20px!important;
+	transition: all .1s ease-out !important;
+}
+
+#faq .faq-accordion .faq-main:hover {
+	color: black;
+	transition: all 1s ease !important;
+}
+
+#faq .faq-accordion .faq-title {
+	padding: 5px 5px 5px 5px !important;
+}
+
+#faq .faq-accordion .faq-title h4 {
+	text-align: center !important;
+}
+
+#faq [data-accordion] > [data-control]:after {
+	visibility: hidden;
+}
+
+.faq-accordion .faq-main:nth-child(4),
+ {
+	display: none !important;
+}
+
+.faq-accordion .faq-title h4 {
+	text-align: left!important;
+	font-weight: lighter!important;
+}
+
+.faq-accordion .faq-content {
+	text-align: left !important;
+}
+
+#faq .faq-accordion .faq-content {
+	color: black !important;
+}
+
+#faq button {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid white !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: white !important;
+}
+
+#faq button:hover {
+	box-shadow: none !important;
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid black !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: black !important;
+	transition: all 1s ease;
+	text-shadow: none !important;
+}
+
+
+/* Contact */
+
+#contact {
+	background-color: #C2A7D0;
+	color: white;
+}
+
+
+#contact #ContactIcon .st0 {
+	stroke: white !important;
+}
+#contact #ContactIcon .st1 {
+	fill: white !important;
+}
+
+#contact .one-half {
+	width: 44.5%;
+	display: inline-block;
+	margin: 0 0.3em;
+}
+
+#contact .one-whole {
+	width: 90%;
+	margin: 0 auto;
+}
+
+input[type="text"],
+ input[type="email"],
+  input[type="url"],
+	 input[type="password"],
+	  input[type="search"],
+		 input[type="number"],
+		  input[type="tel"],
+			 input[type="range"],
+			  input[type="date"],
+				 input[type="month"],
+				  input[type="week"],
+					 input[type="time"],
+					  input[type="datetime"],
+						 input[type="datetime-local"],
+						  input[type="color"],
+							 textarea {
+								 width: 100%;
+							    color: white;
+							    border: 5px solid white;
+							    padding: 3px;
+									background: transparent;
+									resize: none;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+	outline: none;
+	background-color: #C2A7D0;
+	color: white;
+}
+
+#contact input:-webkit-autofill,
+#contact textarea:-webkit-autofill,
+#contact select:-webkit-autofill {
+	background-color: #C2A7D0 !important;
+	color: white !important;
+
+}
+
+#contact .one-whole input[type="submit"] {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid white !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: white !important;
+	text-shadow: none !important;
+	transition: all 1s ease;
+}
+
+#contact .one-whole input[type="submit"]:hover {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 2px solid black !important;
+	padding: 0.333em 2.333em !important;
+	text-align: center !important;
+	border-radius: 6.66px !important;
+	line-height: 2 !important;
+	text-transform: capitalize !important;
+	color: black !important;
+	transition: all 1s ease;
+	text-shadow: none !important;
+}
+/* Blog */
+
+#blog {
+background-color: #D0BD8A;
+color: white;
+}
+
+#blog #BlogIcon .st0 {
+	stroke: white !important;
+}
+
+#blog #BlogIcon .st1 {
+	fill: white !important;
+}
+
+/* Footer */
+
+footer {
+	background-color: white !important;
+	padding: 2em 0;
+}
+.site-footer {
+	display: none;
+}
+
+footer .mg-wpsi {
+	width: 100%!important;
+	margin: 0 auto!important;
+	padding: 0!important;
+}
+
+footer .mg-wpsi li {
+	float: none !important;
+	display: inline-block !important;
+}
+
+footer .mg-wpsi li a:hover i {
+	transition: all 1s ease !important;
+}
+
+.edit-link {
+	display: none;
+}
+
+
+/* Animation */
+
+/* REVEAL NAV */
+.concealed {
+		opacity: 0;
+    position: relative !important;
+    top: -110px !important;
+}
+
+.revealed {
+		opacity: 1;
+    top: 0px !important;
+    transition: all 2s ease;
+}
+
+
+
+/* FADE IN TEXT */
+.inactive {
+  opacity: 0;
+}
+
+.active {
+  opacity:1;
+  transition: opacity 1s ease;
+}
+
+/* Fade in Logo */
+
+.inActiveL {
+	opacity: 0;
+}
+
+.activeL {
+  opacity:1;
+  transition: opacity 3s ease;
+}
+
+/* Sticky Nav */
+.main-nav-concealed {
+	opacity: 0;
+}
+
+.main-nav-scrolled {
+	opacity: 1;
+	transition: all 1s ease;
+  position: fixed !important;
+  width: 100% !important;
+  top: 0 !important;
+	left: 0 !important;
+	color: black !important;
+	background-color: white !important;
+	padding: 1em;
+	border-bottom: 2px solid #151515;
+	z-index: 99999999999999 !important;
+}
+
+.main-nav-scrolled ul li {
+	color: #151515;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 200px) {
+	.heroContainer .title h1 {
+		font-size: 4em;
+	}
+
+	.hero .heroInfoP {
+		width: 80%;
+	}
+
+	.about .container {
+		width: 90%;
+	}
+
+	.contactContainer .contactColumn {
+		display: block;
+		width: 100%;
+	}
+}
+
+/* ////////////// FAQ PAGE ////////////// */
+
+.page-id-177 .entry-title {
+	display: none !important;
+}
+
+.page-id-177 #secondary {
+	display: none !important;
+}
+
+.page-id-177 .entry-footer {
+	display: none !important;
+}
+
+.faq-content {
+	line-height: 1.666;
+}
+
+
+
+/* ////////////// BLOGs PAGE ////////////// */
+
+/* Global */
+
+.site-content {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	align-self: flex-start;
+	align-content: center;
+	flex-direction: row;
+
+	width: 100vw;
+}
+
+/* Side Bar */
+
+.widget {
+	padding: 1em 0;
+	border-bottom: solid 2px black;
+}
+
+.widget_recent_entries ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.widget_recent_entries ul li a{
+	color: black;
+	text-decoration: none;
+}
+
+.widget_recent_entries ul li a:visited,
+.widget_recent_entries ul li a:active {
+	color: black;
+	text-decoration: none;
+}
+
+.widget_recent_entries ul li a:hover {
+
+}
+
+
+/* Blog Section */
+
+.blog #secondary {
+	display: none !important;
+}
+
+.blog .content-area {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.blog .widget-area {
+	width: 30%;
+	margin: 0 auto;
+}
+.blog .post {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.blog .post .entry-header,
+.blog .post .entry-content
+.blog .post .entry-header .entry-title h2 a,
+.blog .post .entry-header .entry-meta {
+	text-align: left !important;
+}
+
+.blog .post .entry-header .entry-meta {
+	font-size: 0.6em;
+	margin: 0.67em 0;
+}
+
+.blog .post h1 {
+	color: black;
+	text-decoration: none;
+
+}
+
+/* Footer */
+
+footer {
+	background: #151515; /* fallback for old browsers */
+}
+
+
+/* /////// Blog Single Page ///////// */
+
+.single-post #secondary {
+	display: none !important;
+}
+
+.single-post #respond {
+	display: none !important;
+}
+
+.single-post .site-content {
+	height: 100vh;
+}
+
+.single-post .post-navigation {
+	display: none !important;
+}
+
+
+/* /////// Author Page ///////// */
+
+
+.author #secondary {
+	display: none !important;
+}
+
+.aurthor #content #primary #main .post {
+	width: 80% !important;
+	margin: 0 auto !important;
+}
